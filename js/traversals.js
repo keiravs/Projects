@@ -138,15 +138,14 @@ const sleep = (millis) => {
 async function dfs_recursive(tile, r, g, b){
     if(tile == null) return;
     if(tile.checked) return;
-    tile.checked = true;
     if(!tile.compareColour(r, g, b)) return;
+    tile.checked = true;
     tile.setColour(0, 100, 100);
     await sleep(100);
-    // draw();
 
     dfs_recursive(grid.getUpNeighbour(tile), r, g, b);
-    dfs_recursive(grid.getDownNeighbour(tile), r, g, b);
     dfs_recursive(grid.getRightNeighbour(tile), r, g, b);
+    dfs_recursive(grid.getDownNeighbour(tile), r, g, b);
     dfs_recursive(grid.getLeftNeighbour(tile), r, g, b);
     return;
 }
@@ -189,17 +188,40 @@ async function bfs(tile, r, g, b){
     RUNNING = false;
 }
 
+function reset(){
+    if(RUNNING) return;
+    grid.reset();
+}
+
+function createBlankGrid(){
+    if(RUNNING) return;
+    grid.generateTiles();
+}
+
 function setup(){
     // print(`rows ${rows} cols ${cols}`);
     let cnvs = createCanvas(canvasWidth, canvasHeight);
     cnvs.parent("sketch");
+
     grid = new Grid(rows, cols);
+
     execute_dfs = createCheckbox('Depth-First');
+    execute_dfs.parent("sketch");
+    execute_dfs.class("p5Checkbox");
+
     execute_bfs = createCheckbox('Breadth-First');
-    // freeDraw = createCheckbox('free draw');
+    execute_bfs.parent("sketch");
+    execute_bfs.class("p5Checkbox");
+
+
     resetBtn = createButton('Reset');
+    resetBtn.parent("sketch");
+    resetBtn.class("p5Button");
     resetBtn.mousePressed(reset);
+
     blankGrid = createButton('Create Blank Grid');
+    blankGrid.parent("sketch");
+    blankGrid.class("p5Button");
     blankGrid.mousePressed(createBlankGrid);
 }
 
@@ -225,16 +247,6 @@ function mousePressed(){
         if(execute_dfs.checked() && !execute_bfs.checked()) dfs_recursive(chosenTile, chosenTile.red, chosenTile.green, chosenTile.blue);
         if(execute_bfs.checked() && !execute_dfs.checked()) bfs(chosenTile, chosenTile.red, chosenTile.green, chosenTile.blue);
     }
-}
-
-function reset(){
-    if(RUNNING) return;
-    grid.reset();
-}
-
-function createBlankGrid(){
-    if(RUNNING) return;
-    grid.generateTiles();
 }
 
 // TODO : Grid and Tiles are set up. Next is to:

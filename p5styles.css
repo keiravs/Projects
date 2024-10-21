@@ -1,0 +1,50 @@
+/* Ensure the parent div adapts to the sketch size */
+#sketch {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't overflow horizontally */
+    height: auto; /* Adjust height automatically */
+    text-align: center; /* Optional: Center the canvas horizontally */
+    padding: 20px; /* Optional: Add padding inside the container */
+    box-sizing: border-box; /* Include padding and border in the div's width and height */
+    overflow: hidden; /* Hide any overflow if it happens */
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* General Styling for Form Elements (buttons, checkboxes) */
+input[type="checkbox"], button, .p5Button {
+    font-family: 'Press Start 2P', cursive;
+    color: #f4f4f9;
+    background-color: #8338ec;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #ffbe0b; /* Yellow accent for the checkbox */
+}
+
+input[type="checkbox"]:checked {
+    background-color: #ffbe0b; /* When checked, the background changes to yellow */
+}
+
+button:hover, .p5Button:hover {
+    background-color: #ff006e; /* Pink background on hover */
+}
+
+button:focus, input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #3a86ff;
+}

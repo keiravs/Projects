@@ -4,21 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keirav Shah</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="p5styles.css">
     <script src="js/libraries/p5.min.js"></script>
     <script src="js/traversals.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <div class="back-button">
+            <a href="projects.html">← Back to Projects</a>
+        </div>
+    </nav>
+    <div class="container">        
+        <!-- Sketch Description Section -->
+        <section class="sketch-description">
+            <h2>Traversing the martian surface</h2>
+            <p>Inspired by a project I did a while ago.</p>
+            <p>Imagine the map below represents the surface of Mars. Different shades represent different altitudes.
+                We are sending a rover to explore the surface, however, the rover has limited energy and hence will only explore regions of the same
+                altitude as where it lands. Clicking on a cell indicates the landing location and the algorithm selected will then show the surrounding
+                region that the rover will explore.</p>
+            <p>This visualization illustrates the different ways that Depth-First and Breadth-First Search traverse surrounding nodes.</p>
+        </section>
+    </div>
     <div class="container">
-        <section class="traversals">
-            <h1>Graph Traversal</h1>
-            <h4>Inspired by a project I did a while ago.</h4>
-            <h4>Imagine the map below represents the surface of an extraterrestial planet. Different shades represent different altitudes.
-            We are sending a rover to explore the surface, however, the rover has limited energy and hence will only explore regions of the same
-            altitude as where it lands. Clicking on a cell indicates the landing location and the algorithm selected will then show the surrounding
-            region that the rover will explore.</h4>
-            <h4>This program illustrates the different ways that Depth-First and Breadth-First Search traverse surrounding nodes.</h4>
-        <div class="container" id="sketch"></div>
+        <!-- Sketch Container -->
+        <section class="sketch">
+            <div id="sketch"></div>
         </section>
     </div>
 

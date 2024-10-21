@@ -15,20 +15,15 @@ body {
 }
 
 /* Navigation Bar styling */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #3a86ff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
+/* Base Navbar Styling */
 nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: flex-start;
-    list-style-type: none;
+    justify-content: flex-start; /* Align the navbar items to the left */
+    background-color: #3a86ff; /* Retro blue background */
+    padding: 15px;
 }
 
 nav ul li {
@@ -37,16 +32,33 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #f4f4f9;
-    font-size: 0.9em;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+    color: #f4f4f9; /* Light color for links */
+    font-size: 1em; /* Default font size */
+    font-family: 'Press Start 2P', cursive; /* Retro font */
+    transition: font-size 0.3s ease, padding 0.3s ease; /* Smooth transition */
+    padding: 8px 16px; /* Default padding */
+    border-radius: 5px; /* Rounded edges */
 }
 
 nav ul li a:hover {
-    background-color: #8338ec;
-    border-radius: 5px;
+    background-color: #ff006e; /* Pink hover effect */
 }
+
+/* Larger Screens - Adjust navbar for bigger screens */
+@media (min-width: 768px) {
+    nav ul li a {
+        font-size: 1.2em; /* Increase font size on larger screens */
+        padding: 10px 20px; /* Add more padding to links */
+    }
+}
+
+@media (min-width: 1024px) {
+    nav ul li a {
+        font-size: 1.4em; /* Even larger font size for wide screens */
+        padding: 12px 24px; /* Add even more padding */
+    }
+}
+
 
 /* Container styling */
 .container {
@@ -118,6 +130,7 @@ header h1 {
     color: #f4f4f9;
     margin-bottom: 50px;
 }
+
 
 /* Full height body to accommodate content */
 html, body {
