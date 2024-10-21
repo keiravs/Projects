@@ -7,43 +7,76 @@
 
 /* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #0f1021;
+    color: #f4f4f9;
     line-height: 1.6;
     padding: 20px;
 }
 
-/* Container to center content */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Navigation Bar styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3a86ff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Header styling */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4f4f9;
+    font-size: 0.9em;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #8338ec;
+    border-radius: 5px;
+}
+
+/* Container styling */
+.container {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 40px;
+    background-color: #1a1b41;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+/* About Me Section */
 header h1 {
-    text-align: center;
     font-size: 3em;
-    color: #00bfff;
+    color: #ffbe0b;
     margin-bottom: 20px;
 }
 
-/* Intro section */
-.intro p {
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 40px;
+.about p {
+    font-size: 1.1em;
+    color: #ff006e;
+    margin-bottom: 50px;
 }
 
-/* Projects section */
+/* Projects Section */
 .projects h2 {
     font-size: 2em;
-    color: #00bfff;
-    margin-bottom: 15px;
+    color: #3a86ff;
+    margin-bottom: 20px;
 }
 
 .projects ul {
@@ -52,18 +85,41 @@ header h1 {
 }
 
 .projects ul li {
-    margin: 10px 0;
+    margin: 20px 0; /* Add space between each project */
 }
 
 .projects ul li a {
     text-decoration: none;
-    color: #ffffff;
-    background-color: #0077b6;
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: #f4f4f9;
+    background-color: #8338ec;
+    padding: 15px 30px; /* Increased padding for better button size */
+    border-radius: 10px;
+    font-size: 1em;
+    display: inline-block; /* Ensure buttons don't overlap */
+    width: 100%; /* Make the buttons take up the full width */
+    box-sizing: border-box; /* Prevent padding from making the button overflow */
     transition: background-color 0.3s ease;
 }
 
 .projects ul li a:hover {
-    background-color: #00bfff;
+    background-color: #ff006e; /* Hover effect with retro pink */
+}
+
+
+/* Things I Find Interesting Section */
+.interesting h2 {
+    font-size: 2em;
+    color: #ffbe0b;
+    margin-bottom: 20px;
+}
+
+.interesting p {
+    font-size: 1.1em;
+    color: #f4f4f9;
+    margin-bottom: 50px;
+}
+
+/* Full height body to accommodate content */
+html, body {
+    height: 100%;
 }
