@@ -23,8 +23,8 @@ body::before {
     height: 100%;
     pointer-events: none; /* Make sure this doesn’t interfere with any interaction */
     background: repeating-linear-gradient(
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1) 1px,
+        rgba(255, 255, 255, 0.09),
+        rgba(255, 255, 255, 0.09) 1px,
         transparent 1px,
         transparent 3px
     );
