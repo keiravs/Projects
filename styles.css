@@ -14,6 +14,46 @@ body {
     padding: 20px;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Make sure this doesn’t interfere with any interaction */
+    background: repeating-linear-gradient(
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    z-index: 9999;
+}
+
+/* Text animations */
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #ff006e, -2px -2px #3a86ff;
+    }
+    33% {
+        text-shadow: -2px -2px #ff006e, 2px 2px #3a86ff;
+    }
+    66% {
+        text-shadow: 2px -2px #ff006e, -2px 2px #3a86ff;
+    }
+    100% {
+        text-shadow: -2px 2px #ff006e, 2px -2px #3a86ff;
+    }
+}
+
+h1, h2, h3 { /* Apply glitch to headers and paragraphs */
+    animation: glitch 1s infinite;
+    font-family: 'Press Start 2P', cursive; /* Retain retro font */
+    color: #ffbe0b; /* Glitchy yellow color */
+}
+
+
 /* Navigation Bar styling */
 /* Base Navbar Styling */
 nav ul {
@@ -43,6 +83,14 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ff006e; /* Pink hover effect */
 }
+
+.retro-border {
+    border: 4px solid #ff006e; /* Bright pink retro color */
+    padding: 10px;
+    box-shadow: 0 0 0 4px #8338ec, 0 0 0 8px #ffbe0b; /* Add multi-layer pixelated shadow */
+    background-color: #0f1021; /* Keep a dark background inside the box */
+}
+
 
 /* Larger Screens - Adjust navbar for bigger screens */
 @media (min-width: 768px) {
