@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Body Simulation</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="../index.html" class="logo" aria-label="Home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 11L12 2L21 11V21H15V14H9V21H3V11Z" fill="#FFFFFF"/>
+            </svg>
+          </a>      <a href="../projects.html">Projects</a>
+      <a href="../interests.html">Interests</a>
+      <a href="../contact.html">Contact Me</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="project-description">
+    <h2>Three Body Problem Simulation</h2>
+    <p>Inspired by the Trisolaran System from the Rememberance of Earth's Past Trilogy by Cixin Liu</p>
+    <p>The simulation below depicts a solar system with three stars orbiting each other and the chaotic nature
+        of three bodies influencing each other. Unlike the two-body problem which has been solved (we have an equation which
+        can perfectly predict the system's state at any point) the three body problem is unsolvable - for now at least.
+        After reading the Three Body Problem, I was intrigued with this idea wanted to simulate it.
+    </p>
+    <p>The Green, Blue & Red bodies are stars, and the yellow body is representative of the planet Trisolaris.</p>
+    <p>(There is more coming to this simulation soon)</p>
+    </section>
+  </div>
+
+  <section class="project-sketch">
+    <div id="sketch-container">
+      <div id="sketch-area"></div>
+    </div>
+    
+    <!-- <div id="sketch-controls"> -->
+  </section>
+
+  <script src="../libraries/p5.min.js"></script>
+  <script src="../js/projects/body.js"></script>
+  <script src="../js/projects/threebody.js"></script>
+</body>
+</html>

@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Keirav Shah</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keirav Shah - Projects</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+  <!-- Navigation Bar -->
+  <header>
     <nav>
-        <ul>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="interests.html">Things I Find Interesting</a></li>
-        </ul>
+        <a href="index.html" class="logo" aria-label="Home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 11L12 2L21 11V21H15V14H9V21H3V11Z" fill="#FFFFFF"/>
+            </svg>
+          </a>
+      <a href="projects.html">Projects</a>
+      <a href="interests.html">Interests</a>
+      <a href="contact.html">Contact Me</a>
     </nav>
+  </header>
 
-    <div class="container retro-border">
-        <!-- Projects Section -->
-        <section class="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="traversals.html">Graph Traversals</a></li>
-                <li><a href="threebody.html">3-Body Simulation</a></li>
-                <li><a>Maze Generation & Solving (Coming Soon)</a></li>
-            </ul>
-        </section>
+  <!-- Projects Section -->
+   <div class="container">
+    <section>
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+            <h3>Traversals</h3>
+            <p>An interesting application of Breadth and Depth first search.</p>
+            <a href="Projects/traversals.html" target="_self">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Three Body Problem</h3>
+            <p>A visualization of the chaotic nature of three bodies orbiting each other</p>
+            <a href="Projects/threebody.html" target="_self">View Project</a>
+        </div>
+        
+        </div>
+     </section>
     </div>
 </body>
 </html>

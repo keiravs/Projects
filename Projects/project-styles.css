@@ -1,0 +1,104 @@
+/* Centered Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+ /* Sketch Container */
+.project-sketch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+/* Container to hold both the sketch and controls */
+#sketch-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  /* Sketch area for canvas */
+  #sketch-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Remove width control on canvas */
+  canvas {
+    display: block;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #210791;
+    border-radius: 5px;
+  }
+  
+  
+  /* Controls Area */
+  #sketch-controls {
+    display: flex;
+    flex-direction: column;      /* Stack controls vertically */
+    gap: 10px;                   /* Space between controls */
+    margin-left: 1rem;           /* Space between sketch and controls */
+  }
+  
+  #sketch-controls button,
+  #sketch-controls label {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #sketch-controls button:hover,
+  #sketch-controls label:hover {
+    background-color: #1ABC9C;
+  }
+  
+  /* p5.js canvas styling */
+  canvas {
+    max-width: 100%;  /* Makes the canvas responsive */
+    height: auto;     /* Adjusts height automatically to maintain aspect ratio */
+  }
+  
+  
+  /* p5.js canvas styling */
+  canvas {
+    max-width: 100%;  /* Makes the canvas responsive */
+    height: auto;     /* Adjusts height automatically to maintain aspect ratio */
+  }
+  
+  /* Description Section */
+  .project-description {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .project-description h2 {
+    color: #2C3E50;
+    margin-bottom: 1rem;
+  }
+  
+  .project-description p {
+    color: #636e72;
+    font-size: 1.1rem;
+  }
+  

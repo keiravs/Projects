@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traversals</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project-styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="../index.html" class="logo" aria-label="Home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 11L12 2L21 11V21H15V14H9V21H3V11Z" fill="#FFFFFF"/>
+            </svg>
+          </a>      <a href="../projects.html">Projects</a>
+      <a href="../interests.html">Interests</a>
+      <a href="../contact.html">Contact Me</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section class="project-description">
+      <h2>Traversals</h2>
+      <p>Inspired by a project I did a while ago.</p>
+      <p>Imagine the map below represents the surface of Mars. Different shades represent different altitudes.
+        We are sending a rover to explore the surface, however, the rover has limited energy and hence will only explore regions of the same
+        altitude as where it lands. Clicking on a cell indicates the landing location and the algorithm selected will then show the surrounding
+        region that the rover will explore.</p>
+    </section>
+  </div>
+
+  <section class="project-sketch">
+    <div id="sketch-container">
+      <div id="sketch-area"></div>
+    
+      <div id="sketch-controls"></div>  
+  </section>
+  
+
+
+  <script src="../libraries/p5.min.js"></script>
+  <script src="../js/projects/traversals.js"></script>
+</body>
+</html>

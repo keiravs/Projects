@@ -1,186 +1,126 @@
-/* General resets */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #0f1021;
-    color: #f4f4f9;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Make sure this doesn’t interfere with any interaction */
-    background: repeating-linear-gradient(
-        rgba(255, 255, 255, 0.09),
-        rgba(255, 255, 255, 0.09) 1px,
-        transparent 1px,
-        transparent 3px
-    );
-    z-index: 9999;
-}
-
-/* Text animations */
-@keyframes glitch {
-    0% {
-        text-shadow: 2px 2px #ff006e, -2px -2px #3a86ff;
-    }
-    33% {
-        text-shadow: -2px -2px #ff006e, 2px 2px #3a86ff;
-    }
-    66% {
-        text-shadow: 2px -2px #ff006e, -2px 2px #3a86ff;
-    }
-    100% {
-        text-shadow: -2px 2px #ff006e, 2px -2px #3a86ff;
-    }
-}
-
-h1, h2, h3 { /* Apply glitch to headers and paragraphs */
-    animation: glitch 1s infinite;
-    font-family: 'Press Start 2P', cursive; /* Retain retro font */
-    color: #ffbe0b; /* Glitchy yellow color */
-}
-
-
-/* Navigation Bar styling */
-/* Base Navbar Styling */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: flex-start; /* Align the navbar items to the left */
-    background-color: #3a86ff; /* Retro blue background */
-    padding: 15px;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #f4f4f9; /* Light color for links */
-    font-size: 1em; /* Default font size */
-    font-family: 'Press Start 2P', cursive; /* Retro font */
-    transition: font-size 0.3s ease, padding 0.3s ease; /* Smooth transition */
-    padding: 8px 16px; /* Default padding */
-    border-radius: 5px; /* Rounded edges */
-}
-
-nav ul li a:hover {
-    background-color: #ff006e; /* Pink hover effect */
-}
-
-.retro-border {
-    border: 4px solid #ff006e; /* Bright pink retro color */
-    padding: 10px;
-    box-shadow: 0 0 0 4px #8338ec, 0 0 0 8px #ffbe0b; /* Add multi-layer pixelated shadow */
-    background-color: #0f1021; /* Keep a dark background inside the box */
-}
-
-
-/* Larger Screens - Adjust navbar for bigger screens */
-@media (min-width: 768px) {
-    nav ul li a {
-        font-size: 1.2em; /* Increase font size on larger screens */
-        padding: 10px 20px; /* Add more padding to links */
-    }
-}
-
-@media (min-width: 1024px) {
-    nav ul li a {
-        font-size: 1.4em; /* Even larger font size for wide screens */
-        padding: 12px 24px; /* Add even more padding */
-    }
-}
-
-
-/* Container styling */
+/* Centered Container */
 .container {
-    max-width: 1000px;
-    margin: 120px auto;
-    padding: 40px;
-    background-color: #1a1b41;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-    text-align: left;
+  max-width: 800px;   /* Adjust width as needed */
+  margin: 0 auto;     /* Centers the container */
+  padding: 0 1rem;    /* Adds some padding on the sides */
 }
 
-/* About Me Section */
-header h1 {
-    font-size: 3em;
-    color: #ffbe0b;
-    margin-bottom: 20px;
+/* Body Styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2D3436;
+  background-color: #F5F5F5;
+  margin: 0;
 }
 
-.about p {
-    font-size: 1.1em;
-    color: #ff006e;
-    margin-bottom: 50px;
+/* Header and Navigation */
+header {
+  background-color: #2C3E50;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* Projects Section */
-.projects h2 {
-    font-size: 2em;
-    color: #3a86ff;
-    margin-bottom: 20px;
+nav {
+  display: flex;
 }
 
-.projects ul {
-    list-style-type: none;
-    padding-left: 0;
+nav a {
+  color: #FFFFFF;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
-.projects ul li {
-    margin: 20px 0; /* Add space between each project */
+nav a:hover {
+  color: #1ABC9C;
 }
 
-.projects ul li a {
-    text-decoration: none;
-    color: #f4f4f9;
-    background-color: #8338ec;
-    padding: 15px 30px; /* Increased padding for better button size */
-    border-radius: 10px;
-    font-size: 1em;
-    display: inline-block; /* Ensure buttons don't overlap */
-    width: 100%; /* Make the buttons take up the full width */
-    box-sizing: border-box; /* Prevent padding from making the button overflow */
-    transition: background-color 0.3s ease;
+.logo {
+  margin-right: auto;
 }
 
-.projects ul li a:hover {
-    background-color: #ff006e; /* Hover effect with retro pink */
+/* Hero Section for index.html */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(to bottom, #f5f5f5, #ecf0f1);
 }
 
-
-/* Things I Find Interesting Section */
-.interesting h2 {
-    font-size: 2em;
-    color: #ffbe0b;
-    margin-bottom: 20px;
+.hero h1 {
+  font-size: 2.5rem;
+  color: #2C3E50;
 }
 
-.interesting p {
-    font-size: 1.1em;
-    color: #f4f4f9;
-    margin-bottom: 50px;
+.hero p {
+  font-size: 1.2rem;
+  color: #636e72;
 }
 
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
 
-/* Full height body to accommodate content */
-html, body {
-    height: 100%;
+.cta-button:hover {
+  background-color: #1ABC9C;
+}
+
+/* Page Sections */
+section h2 {
+  color: #2C3E50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.project-card {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.interests-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Contact Form Section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1ABC9C;
 }
