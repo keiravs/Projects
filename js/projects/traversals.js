@@ -143,10 +143,10 @@ async function dfs_recursive(tile, r, g, b){
     tile.setColour(0, 100, 100);
     await sleep(100);
 
-    dfs_recursive(grid.getUpNeighbour(tile), r, g, b);
-    dfs_recursive(grid.getRightNeighbour(tile), r, g, b);
-    dfs_recursive(grid.getDownNeighbour(tile), r, g, b);
-    dfs_recursive(grid.getLeftNeighbour(tile), r, g, b);
+    await dfs_recursive(grid.getUpNeighbour(tile), r, g, b);
+    await dfs_recursive(grid.getRightNeighbour(tile), r, g, b);
+    await dfs_recursive(grid.getDownNeighbour(tile), r, g, b);
+    await dfs_recursive(grid.getLeftNeighbour(tile), r, g, b);
     return;
 }
 
