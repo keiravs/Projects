@@ -141,7 +141,7 @@ async function dfs_recursive(tile, r, g, b){
     if(!tile.compareColour(r, g, b)) return;
     tile.checked = true;
     tile.setColour(0, 100, 100);
-    await sleep(100);
+    await sleep(10);
 
     await dfs_recursive(grid.getUpNeighbour(tile), r, g, b);
     await dfs_recursive(grid.getRightNeighbour(tile), r, g, b);
